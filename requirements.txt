@@ -1,0 +1,6 @@
+python~=3.10
+Django~=4.2.1
+pyserial~=3.5
+whitenoise~=6.4
+
+
