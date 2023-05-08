@@ -1,0 +1,33 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/bootstrap/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'app/bootstrap/js/bootstrap.min.js' %}"></script>
+    <title>Mobius Link</title>
+</head>
+<body>
+
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="{% static 'app/logo2_blue.png' %}" alt='logo' width="70" height="50">Mobi-Tech</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'app:list' %}">LIST</a>
+                <a class="nav-item nav-link" href="">ADD</a>
+                <a class="nav-item nav-link" href="">DELETE</a>
+            </div>
+        </div>
+      </nav>
+
+    {% block content %}   
+    {% endblock %}
+
+</body>
+</html>
