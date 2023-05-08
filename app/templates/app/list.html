@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>IDD Interface Port:</h4>
+<select class="form-select" aria-label="Default select example" name="SELECTED_COM">
+    <option selected>Select COM port</option>
+    {% for port in all_ports %}
+    <option value={{port.id}}>{{port}}</option>
+    {% endfor %}
+</select>
+
+{% endblock content %}
